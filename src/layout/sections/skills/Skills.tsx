@@ -10,15 +10,17 @@ export const Skills = () => {
         <StyledSkills>
             <SectionTitle>My Skills</SectionTitle>
             <FlexWrapper>
-                <Skill/>
-                <Skill/>
-                <Skill/>
+                <Skill title={'html5'} iconId={'codeSvg'}/>
+                <Skill title={'css3'} iconId={'css'}/>
+                <Skill title={'React'} iconId={'react'}/>
             </FlexWrapper>
         </StyledSkills>
     );
 };
 
 const StyledSkills = styled.section`
+  background-color: #eccbea;
+  min-height: 100vh;
 
 
 `
