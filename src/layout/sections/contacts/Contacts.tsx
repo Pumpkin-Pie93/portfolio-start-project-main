@@ -25,7 +25,7 @@ max-width: 500px;
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 22px;
 `
 
 const Field = styled.input`
