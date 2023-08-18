@@ -18,6 +18,6 @@ export const Testimony = () => {
 };
 
 const StyledTestimony = styled.section`
-  min-height: 100vh;
+  min-height: 50vh;
   background-color: lightgray;
 `
