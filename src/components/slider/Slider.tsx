@@ -26,6 +26,9 @@ const StyledSlider = styled.div`
   border: 1px solid darkslategray;
   border-radius: 5px;
   max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `
 
 const Slide = styled.div`
@@ -37,13 +40,13 @@ const Text = styled.p`
 
 const Name = styled.span`
 `
-const Pagination = styled.span`
- span {
-   display: inline-block;
-   width: 10px;
-   height: 10px;
-   margin: 5px;
-   background-color: chartreuse;
- }
+const Pagination = styled.div`
+  span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+    background-color: #343631;
+  }
 
 `
