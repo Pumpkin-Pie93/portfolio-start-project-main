@@ -13,7 +13,7 @@ export const Slogan = () => {
 };
 
 const StyledSlogan = styled.section`
-    min-height: 30vh;
-  background-color: yellow;
-  
+  min-height: 30vh;
+  background-color: #b7a6b7;
+
 `
