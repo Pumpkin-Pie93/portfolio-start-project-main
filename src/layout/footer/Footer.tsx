@@ -2,6 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import {Icon} from "../../components/icon/Icon";
 import {FlexWrapper} from "../../components/FlexWrapper";
+import {theme} from "../../styles/Theme";
 
 export const Footer = () => {
     return (
@@ -29,7 +30,6 @@ export const Footer = () => {
                             <Icon height={'21px'} width={'21px'} viewBox={'0 0 21px 21px'} iconId={'linkedin'}/>
                         </SocialLink>
                     </SocialItem>
-
                 </SocialList>
                 <Copyright>© 2023 Svetlana Dyablo, All Rights Reserved.</Copyright>
             </FlexWrapper>
@@ -39,24 +39,45 @@ export const Footer = () => {
 
 
 const StyledFooter = styled.footer`
-  background-color: rgb(82, 75, 86);
-  min-height: 20vh;
+  background-color: ${theme.colors.primaryBcg};
+  padding: 40px;
 `
 const Name = styled.span`
-
+  font-family: Josefin Sans,sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 3px;
 `
 
 const SocialList = styled.ul`
 display: flex;
-  gap: 30px;
+  gap: 20px;
+  margin: 30px 0 ;
 `
 const SocialItem = styled.li`
 
 `
 
 const SocialLink = styled.a`
-
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.10);
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  color: ${theme.colors.accent};
+  
+  &:hover {
+    color: ${theme.colors.primaryBcg};
+    transform: translateY(-4px); 
+  }
+ 
 `
 const Copyright = styled.small`
-
+  opacity: 0.5;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
 `
