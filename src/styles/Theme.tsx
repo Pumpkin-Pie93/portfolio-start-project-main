@@ -4,6 +4,9 @@ export const theme = {
         secondaryBcg: '#252527',
         accent: '#7572D5',
 
-        font: '#ffffff'
+        font: '#ffffff',
+
+        borderColor: "#4A4A4A",
+        placeholder: '#495057'
     }
 }
