@@ -6,10 +6,10 @@ import {theme} from "../../../styles/Theme";
 export const MobileMenu = (props: { menuItems: Array<string> }) => {
     return (
         <StyledMobileMenu>
-            <BurgerBtn isOpen={true}>
+            <BurgerBtn isOpen={false}>
                 <span></span>
             </BurgerBtn >
-            <MobileMenuPopup isOpen={true}>
+            <MobileMenuPopup isOpen={false}>
                 <ul>
                     {props.menuItems.map((item: string, index: number) => {
                         return <ListItem key={index}>
@@ -45,10 +45,8 @@ position: fixed;
   top:-100px;
   right: -100px;
   z-index: 99999999;
-  
-  
-  
-  span {
+    
+    span {
     display: block;
     width: 36px;
     height: 2px;
@@ -57,7 +55,7 @@ position: fixed;
     left: 40px;
     bottom: 50px;
     
-    ${props => props.isOpen && css<{ isOpen: boolean }>`
+    ${props => props.isOpen && css<{isOpen: boolean}>`
     background-color: rgba(255, 255, 255, 0); //Если сделать опасити или транспорент, псевдоэл-ы тоже исчезнут
   `}
     
@@ -70,7 +68,7 @@ position: fixed;
       position: absolute;
       transform: translateY(-10px);
 
-      ${props => props.isOpen && css<{ isOpen: boolean }>`
+      ${props => props.isOpen && css<{isOpen: boolean}>`
         transform: rotate(-45deg) translateY(0);
   `}
     }
@@ -83,15 +81,12 @@ position: fixed;
       position: absolute;
       transform: translateY(10px);
 
-      ${props => props.isOpen && css<{ isOpen: boolean }>`
+      ${props => props.isOpen && css<{isOpen: boolean}>`
         transform: rotate(45deg) translateY(0);
         width: 36px;
   `}
     }
-      
-    }
   }
-  
 `
 
 const MobileMenuPopup = styled.div<{isOpen: boolean}>`
@@ -101,10 +96,10 @@ const MobileMenuPopup = styled.div<{isOpen: boolean}>`
   right: 0;
   bottom: 0;
   z-index: 99999;
-  background-color: #1F1F20E5;
+  background-color: rgba(31, 31, 32, 0.9);
   display: none;
 
-${props => props.isOpen && css<{ isOpen: boolean }>`
+${props => props.isOpen && css<{isOpen: boolean}>`
 display: flex;
   justify-content: center;
   align-items: center;
