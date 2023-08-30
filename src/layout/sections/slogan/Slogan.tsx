@@ -4,6 +4,7 @@ import {SectionTitle} from "../../../components/SectionTitle";
 import {Button} from "../../../components/Button";
 import {Container} from "../../../components/Container";
 import {FlexWrapper} from "../../../components/FlexWrapper";
+import {theme} from "../../../styles/Theme";
 
 export const Slogan = () => {
     return (
@@ -21,5 +22,12 @@ export const Slogan = () => {
 const StyledSlogan = styled.section`
   min-height: 30vh;
   background-color: #b7a6b7;
+  
+  
+  @media ${theme.media.mobile} {
+    ${SectionTitle} {
+      line-height: 28px;
+    } 
+  }
 
 `

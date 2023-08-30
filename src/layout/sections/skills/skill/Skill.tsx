@@ -26,10 +26,10 @@ export const Skill = (props: SkillPropsType) => {
 const StyledSkill = styled.div`
   width: 330px; // заменили ширину. Было 380
   flex-grow: 1; // Сколько свободного пространства занимает в родителе Флекс, это дочерний эл-т!!
-  padding: 62px 20px 48px;
+  padding: 42px 20px 52px;
   
   @media ${theme.media.mobile} {
-    padding: 62px 0 48px;
+    padding: 5px 0 96px;
   }
 `
 

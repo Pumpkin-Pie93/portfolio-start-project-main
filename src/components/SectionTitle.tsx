@@ -29,10 +29,11 @@ export const SectionTitle = styled.h2`
     
     @media ${theme.media.mobile} {
       //в медиа пишем, какие стили меняются при экране mobile
-      bottom: -24px; 
-
+      bottom: -24px;
     }
   }
-
-
+  @media ${theme.media.mobile} {
+    margin-bottom: 84px;
+    letter-spacing: 3px;
+  }
 `

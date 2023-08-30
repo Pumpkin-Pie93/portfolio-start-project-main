@@ -52,6 +52,11 @@ const SocialList = styled.ul`
 display: flex;
   gap: 20px;
   margin: 30px 0 ;
+  
+  @media ${theme.media.mobile} {  
+    
+    margin: 26px 0 34px;
+  }
 `
 const SocialItem = styled.li`
 
@@ -71,6 +76,7 @@ const SocialLink = styled.a`
   &:hover {
     color: ${theme.colors.primaryBcg};
     transform: translateY(-4px); 
+    background-color: ${theme.colors.accent};
   }
  
 `

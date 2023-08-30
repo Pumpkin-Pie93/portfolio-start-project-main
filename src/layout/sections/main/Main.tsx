@@ -16,6 +16,7 @@ export const Main = () => {
                         <Name>I am <span>Svetlana Dyablo</span></Name>
                         <MainTitle>A Web Developer.</MainTitle>
                     </div>
+
                     <PhotoWrapper>
                         <Photo src={photo}/>
                     </PhotoWrapper>
@@ -34,7 +35,6 @@ const StyledMain = styled.section`
 const PhotoWrapper = styled.div`
   position: relative;
   z-index: 0;
-  margin-top: 65px ;
 
   &::before {
     content: "";
@@ -54,7 +54,9 @@ const PhotoWrapper = styled.div`
     }
   }
 
-
+  @media ${theme.media.mobile} {
+    margin-top: 65px ;
+  }
 `
 
 const Photo = styled.img`
@@ -80,9 +82,7 @@ const Name = styled.h2`
   letter-spacing: 0.05em;
   margin: 10px 0;
   
-  
-
-  span {
+    span {
     position: relative;
     z-index: 0;
     white-space: nowrap;
@@ -99,13 +99,17 @@ const Name = styled.h2`
     }
   }
   
-  @media${theme.media.mobile} {
-  margin: 15px 0 22px;
-  
+  @media ${theme.media.mobile} {
+  margin: 12px 0;
 }
 `
 
 const SmallText = styled.span`
   font-size: 14px;
   font-weight: 400;
+  
+  @media ${theme.media.mobile} {
+    margin-top: 18px;
+    margin-bottom: 1px;
+  }
 `

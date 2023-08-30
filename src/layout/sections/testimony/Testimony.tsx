@@ -6,6 +6,7 @@ import {Slider} from "../../../components/slider/Slider";
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import {IconWrapper} from "../skills/skill/Skill";
 import {Container} from "../../../components/Container";
+import {theme} from "../../../styles/Theme";
 
 export const Testimony = () => {
     return (
@@ -24,11 +25,14 @@ export const Testimony = () => {
 };
 
 const StyledTestimony = styled.section`
-  //min-height: 50vh;
-  //background-color: lightgray;
+  min-height: 50vh;
+  background-color: lightgray;
   
   ${IconWrapper} {
-    margin: 40px 0 72px;
+    margin: 25px 0 72px;
     
+    @media ${theme.media.mobile} {
+      margin: 12px 0 76px;
+    }
   }
 `

@@ -27,7 +27,7 @@ const StyledTabMenu = styled.nav`
     //justify-content: center; иеняем на спейс битвин
     max-width: 352px; //Задаем макс ширину
     width: 100%; // Тянется на всю ширину родительского эл-та, если стал еньше макс ширины
-    border: 1px solid greenyellow;
+    //border: 1px solid greenyellow;
     margin: 0 auto 40px;
   }
 `
