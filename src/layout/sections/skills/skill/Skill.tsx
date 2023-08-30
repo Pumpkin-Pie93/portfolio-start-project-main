@@ -2,6 +2,7 @@ import React from 'react';
 import {Icon} from "../../../../components/icon/Icon";
 import styled from "styled-components";
 import {FlexWrapper} from "../../../../components/FlexWrapper";
+import {theme} from "../../../../styles/Theme";
 
 type SkillPropsType = {
     iconId: string
@@ -23,8 +24,13 @@ export const Skill = (props: SkillPropsType) => {
 };
 
 const StyledSkill = styled.div`
-  width: 380px;
+  width: 330px; // заменили ширину. Было 380
+  flex-grow: 1; // Сколько свободного пространства занимает в родителе Флекс, это дочерний эл-т!!
   padding: 62px 20px 48px;
+  
+  @media ${theme.media.mobile} {
+    padding: 62px 0 48px;
+  }
 `
 
 export const IconWrapper = styled.div`
