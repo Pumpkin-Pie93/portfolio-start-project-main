@@ -8,7 +8,7 @@ import {S} from "../skills/Skills_Styles";
 import {Container} from "../../../components/Container";
 import {theme} from "../../../styles/Theme";
 
-export const Testimony = () => {
+export const Testimony: React.FC = () => {
     return (
         <StyledTestimony>
             <Container>
