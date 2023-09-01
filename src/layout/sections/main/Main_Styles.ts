@@ -17,7 +17,10 @@ const PhotoWrapper = styled.div`
     content: "";
     width: 360px;
     height: 470px;
-    border: 5px solid ${theme.colors.accent};
+    // border: 5px solid ${theme.colors.accent};
+    border: 5px solid;
+    border-image: linear-gradient(to left top, ${theme.colors.accent} 10%,  transparent 30%, transparent 70%,  ${theme.colors.accent} 90%);
+    border-image-slice: 1;
     position: absolute;
     top: -24px;
     left: 24px;
@@ -70,7 +73,8 @@ const Name = styled.h2`
       display: inline-block;
       width: 100%;
       height: 20px;
-      background-color: ${theme.colors.accent};
+        // background-color: ${theme.colors.accent};
+      background: linear-gradient(45deg, transparent, ${theme.colors.accent} 50%, transparent);
       position: absolute;
       bottom: 0;
       z-index: -1;
