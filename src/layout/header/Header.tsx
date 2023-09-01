@@ -2,20 +2,33 @@ import React from 'react';
 import {Logo} from "../../components/logo/Logo";
 import {Container} from "../../components/Container";
 import {FlexWrapper} from "../../components/FlexWrapper";
-import {HeaderMenu} from "./headerMenu/HeaderMenu";
-import {MobileMenu} from "./mobileMenu/MobileMenu";
+import {DesktopMenu} from "./headerMenu/desktopMenu/DesktopMenu";
+import {MobileMenu} from "./headerMenu/mobileMenu/MobileMenu";
 import {S} from './Header_Styles'
 
 const items = ['Home', 'Skills', 'Works', 'Testimony', 'Contact']
 
 export const Header: React.FC = () => { //Пишем Header: React.FC, это функциональная компонента
+
+    const [width, setWidth] = React.useState(window.innerWidth);
+    const breakpoint = 768;
+
+    React.useEffect(() => {
+        const handleWindowResize = () => setWidth(window.innerWidth)
+        window.addEventListener("resize", handleWindowResize);
+
+        // Return a function from the effect that removes the event listener
+        return () => window.removeEventListener("resize", handleWindowResize);
+    }, []);
+
     return (
         <S.Header>
             <Container>
                 <FlexWrapper justify={'space-between'} align={'center'}>
                     <Logo/>
-                    <HeaderMenu menuItems={items}/>
-                    <MobileMenu menuItems={items}/>
+
+                    {width < breakpoint ? <MobileMenu menuItems={items}/>
+                                        : <DesktopMenu menuItems={items}/>}
                 </FlexWrapper>
             </Container>
         </S.Header>
