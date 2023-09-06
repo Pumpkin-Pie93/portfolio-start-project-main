@@ -3,6 +3,7 @@ import {theme} from "../../../styles/Theme";
 import {font} from "../../../styles/Common";
 
 
+
 const Main = styled.section`
   min-height: 100vh;
   background-color: #a392b2;
