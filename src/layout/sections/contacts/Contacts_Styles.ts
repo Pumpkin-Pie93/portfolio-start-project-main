@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 
 const Contacts = styled.section`
-
+position: relative;
 `
 const Form = styled.form`
   max-width: 540px;

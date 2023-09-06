@@ -6,6 +6,7 @@ import {Link} from "../../../components/Link";
 
 
 const Works = styled.section`
+  position: relative;
 // Обращаемся к компоненте, кот. нах-ся внутри другой комп-ы:
   ${FlexWrapper} {
     gap: 30px;

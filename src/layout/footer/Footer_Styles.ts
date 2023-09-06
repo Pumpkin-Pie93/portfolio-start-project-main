@@ -4,6 +4,7 @@ import {font} from "../../styles/Common";
 
 
 const Footer = styled.footer`
+  position: relative;
   background-color: ${theme.colors.primaryBcg};
   padding: 40px;
 `

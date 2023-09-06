@@ -4,11 +4,10 @@ import {SectionTitle} from "../../../components/SectionTitle";
 import {Button} from "../../../components/Button";
 import {Container} from "../../../components/Container";
 import {FlexWrapper} from "../../../components/FlexWrapper";
-import {theme} from "../../../styles/Theme";
 
 export const Slogan: React.FC = () => {
     return (
-        <StyledSlogan>
+        <StyledSlogan id={'slogan'}>
             <Container>
                 <FlexWrapper direction={'column'} align={'center'}>
                     <SectionTitle>I Am Available For Freelance</SectionTitle>

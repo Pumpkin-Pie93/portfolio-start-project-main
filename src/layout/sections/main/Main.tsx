@@ -9,7 +9,7 @@ import {theme} from "../../../styles/Theme";
 
 export const Main: React.FC = () => {
     return (
-        <S.Main>
+        <S.Main id={'home'}>
             <Container>
                 <FlexWrapper align={'center'} justify={'space-around'} wrap={'wrap'}>
                     <div>
