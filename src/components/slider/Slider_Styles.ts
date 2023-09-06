@@ -6,6 +6,7 @@ const Slider = styled.div`
   //border: 1px solid darkslategray;
   border-radius: 5px;
   max-width: 500px;
+  width: 100%  ;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,7 +36,7 @@ const Pagination = styled.div`
     display: inline-block;
     width: 7px;
     height: 7px;
-    margin: 5px;
+    //margin: 5px;
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 20px;
 
