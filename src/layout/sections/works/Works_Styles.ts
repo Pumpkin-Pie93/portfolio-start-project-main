@@ -16,8 +16,8 @@ const Works = styled.section`
 const Work = styled.div`
   background-color: ${theme.colors.secondaryBcg};
   
-  width: 330px;
-  flex-grow: 1;
+  //width: 330px;
+  //flex-grow: 1;
 
   ${Link} {
     padding: 10px 0;
@@ -27,9 +27,9 @@ const Work = styled.div`
     }
   }
   
-  @media ${theme.media.desktop} {
-    max-width: 540px;
-  }
+  // @media ${theme.media.desktop} {
+  //   max-width: 540px;
+  // }
   
 `
 
