@@ -3,7 +3,7 @@ import type { Container, Engine } from "tsparticles-engine";
 import Particles from "react-tsparticles";
 //import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 import { loadSlim } from "tsparticles-slim"; // if you are going to use `loadSlim`, install the "tsparticles-slim" package too.
-
+import img from '../../assets/images/aster.svg'
 export const Particle = () => {
     const particlesInit = useCallback(async (engine: Engine) => {
         console.log(engine);
@@ -20,73 +20,114 @@ export const Particle = () => {
             init={particlesInit}
             loaded={particlesLoaded}
             options={{
-                   //background: {
-                       // color: {
-                     //   value: "#0d47a1",
-                     // },
-                     //},
-                fpsLimit: 120,
-                interactivity: {
-                    events: {
-                        // onClick: {
-                        //     enable: true,
-                        //     mode: "push",
-                        // },
-                        onHover: {
-                            enable: true,
-                            mode: "repulse",
-                        },
-                        resize: true,
+                "particles": {
+                    "number": {
+                        "value": 18,
+                        "density": {
+                            "enable": true,
+                            "value_area": 2000
+                        }
                     },
-                    modes: {
-                        push: {
-                            quantity: 4,
-                        },
-                        repulse: {
-                            distance: 400,
-                            duration: 0.4,
-                        },
+                    "color": {
+                        "value": "#fff"
                     },
+                    "shape": {
+                        "type": "image",
+                        "stroke": {
+                            "width": 0,
+                            "color": "#000000"
+                        },
+                        "polygon": {
+                            "nb_sides": 5
+                        },
+                        "image": {
+                            "src": `${img}`,
+                            "width": 100,
+                            "height": 100
+                        }
+                    },
+                    "opacity": {
+                        "value": 0.8,
+                        "random": true,
+                        "anim": {
+                            "enable": false,
+                            "speed": 2,
+                            "opacity_min": 0.1,
+                            "sync": false
+                        }
+                    },
+                    "size": {
+                        "value": 40,
+                        "random": true,
+                        "anim": {
+                            "enable": true,
+                            "speed": 1,
+                            "size_min": 25,
+                            "sync": false
+                        }
+                    },
+                    "line_linked": {
+                        "enable": false,
+                        "distance": 500,
+                        "color": "#ffffff",
+                        "opacity": 0.4,
+                        "width": 2
+                    },
+                    "move": {
+                        "enable": true,
+                        "speed": 3.206824121731046,
+                        "direction": "top",
+                        "random": true,
+                        "straight": true,
+                        "out_mode": "bounce",
+                        "bounce": false,
+                        "attract": {
+                            "enable": false,
+                            "rotateX": 481.0236182596568,
+                            "rotateY": 320.6824121731046
+                        }
+                    }
                 },
-                particles: {
-                    color: {
-                        value: "#b889ff",
-                    },
-                    links: {
-                        color: "#7500e3",
-                        distance: 150,
-                        enable: true,
-                        opacity: 1,
-                        width: 1,
-                    },
-                    move: {
-                        direction: "none",
-                        enable: true,
-                        outModes: {
-                            default: "bounce",
+                "interactivity": {
+                    "detect_on": "canvas",
+                    "events": {
+                        "onhover": {
+                            "enable": true,
+                            "mode": "bubble"
                         },
-                        random: false,
-                        speed: 2,
-                        straight: false,
-                    },
-                    number: {
-                        density: {
-                            enable: true,
-                            area: 1000,
+                        "onclick": {
+                            "enable": true,
+                            "mode": "repulse"
                         },
-                        value: 30,
+                        "resize": true
                     },
-                    opacity: {
-                        value: 0.5,
-                    },
-                    shape: {
-                        type: "star",
-                    },
-                    size: {
-                        value: { min: 0.2, max: 3.2 },
-                    },
+                    "modes": {
+                        "grab": {
+                            "distance": 400,
+                            "line_linked": {
+                                "opacity": 0.5
+                            }
+                        },
+                        "bubble": {
+                            "distance": 400,
+                            "size": 14,
+                            "duration": 0.3,
+                            "opacity": 1,
+                            "speed": 3
+                        },
+                        "repulse": {
+                            "distance": 200,
+                            "duration": 0.4
+                        },
+                        "push": {
+                            "particles_nb": 4
+                        },
+                        "remove": {
+                            "particles_nb": 2
+                        }
+                    }
                 },
-                detectRetina: true,
+                "retina_detect": true
             }}
         />
     );
