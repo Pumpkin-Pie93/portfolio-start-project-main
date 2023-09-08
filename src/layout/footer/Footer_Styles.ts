@@ -35,12 +35,12 @@ const SocialLink = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  transition: ${theme.animations.transition};
   color: ${theme.colors.accent};
   
   &:hover {
-    color: ${theme.colors.primaryBcg};
-    transform: translateY(-4px); 
+    color: ${theme.colors.secondaryBcg};
+    transform: translateY(-5px); 
     background-color: ${theme.colors.accent};
   }
  

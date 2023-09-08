@@ -10,7 +10,6 @@ import {Footer} from "./layout/footer/Footer";
 import {Particle} from "./components/particle/Particle";
 import {GoTopBtn} from "./components/goTopBtn/GoTopBtn";
 
-
 function App() {
     return (
         <div className="App">

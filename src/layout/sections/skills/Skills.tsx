@@ -3,7 +3,8 @@ import {FlexWrapper} from "../../../components/FlexWrapper";
 import {SectionTitle} from "../../../components/SectionTitle";
 import {Skill} from "./skill/Skill";
 import {Container} from "../../../components/Container";
-import {S} from './Skills_Styles'
+import {S} from './Skills_Styles';
+import {AttentionSeeker} from "react-awesome-reveal";
 
 const skillData = [
     {
@@ -45,12 +46,13 @@ export const Skills: React.FC = () => {
             <Container>
                 <SectionTitle>My Skills</SectionTitle>
                 <FlexWrapper wrap={'wrap'} justify={'space-between'}>
-
-                    {skillData.map((s, index) => {
-                        return <Skill title={s.title} key={index}
-                                      iconId={s.iconId}
-                                      description={s.description}/>
-                    })}
+                    <AttentionSeeker effect={'pulse'} damping={0.3}>
+                        {skillData.map((s, index) => {
+                            return <Skill title={s.title} key={index}
+                                          iconId={s.iconId}
+                                          description={s.description}/>
+                        })}
+                    </AttentionSeeker>
                 </FlexWrapper>
             </Container>
 
